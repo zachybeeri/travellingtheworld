@@ -1,0 +1,22 @@
+<nav class="breadcrumbs_footer" aria-label="breadcrumb_footer">
+  <ol class="breadcrumb-list_footer">
+    <!-- Traverse the parent pages -->
+    {{ range .Ancestors.Reverse }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+
+    <!-- Current page. - not showing the current page in the footer 
+    <li aria-current="page">{{ .Title }}</li>
+    -->
+    <!-- Main menu items -->
+    {{ with .Site.Menus.main }}
+      {{ range . }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ol>
+</nav>

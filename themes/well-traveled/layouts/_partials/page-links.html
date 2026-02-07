@@ -1,0 +1,17 @@
+                <!-- 🔗 Maps and Albums links (only if sections exist) -->
+{{/* layouts/partials/page-links.html */}}
+{{ $trip := . }}
+<div class="trip-links-container" style="display: flex; gap: 10rem;">
+    {{- range slice "album" "maps" -}}
+        {{- with $trip.GetPage . -}}
+            {{- if gt (len .Pages) 0 -}}
+                <div class="section__link">
+                    <a href="{{ .RelPermalink }}">
+                        View {{ .Title }}
+                    </a>
+                </div>
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+</div>
+                <!-- 🔗 Maps and Albums links (only if sections exist) -->

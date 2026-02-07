@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="{{ .Site.BaseURL }}">
+
+  <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>
+  {{ hugo.Generator }}
+
+  {{- $description := partial "description.html" . -}}
+
+  <meta name="build-timestamp" content="{{ now.Format "2006-01-02T15:04:05-0700" }}">
+
+  {{ $indexedPages := slice "home" "section" "page" }}
+  <meta name="robots" content="{{ if in $indexedPages .Kind }}index,follow{{ else }}noindex,follow{{ end }}">
+
+  <meta name="description" content="{{ $description }}">
+  <meta name="author" content="{{ .Site.Author.name }}">
+
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ $description }}">
+  {{ with .Params.image }}
+    <meta property="og:image" content="{{ if reflect.IsMap . }}{{ .source | absURL }}{{ else }}{{ . | absURL }}{{ end }}">
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|PT+Serif:400,400i,700,700i&subset=latin-ext&display=swap" rel="stylesheet">
+
+ {{- $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+
+<link rel="preload" href="https://fonts.gstatic.com/s/firasans/v16/va9E7kz98vqk67pgu9A5T2aexa5m.woff2" as="font" type="font/woff2" crossorigin>
+
+  {{ with .Site.Params.favicon }}
+    <link rel="icon" href="{{ .image | relURL }}" type="{{ .type | default "image/x-icon" }}" sizes="{{ .sizes | default "32x32" }}">
+    <link rel="apple-touch-icon" href="{{ .image | relURL }}">
+  {{ end }}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>

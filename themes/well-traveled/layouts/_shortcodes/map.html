@@ -1,0 +1,64 @@
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+<div id="map-{{ .Get "id" }}" style="height: {{ .Get "height" | default "500px" }};"></div>
+
+<script>
+(function() {
+  var mapId = "map-{{ .Get "id" }}";
+
+  var map = L.map(mapId).setView(
+    [{{ .Get "lat" }}, {{ .Get "lng" }}],
+    {{ .Get "zoom" | default "13" }}
+  );
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // FeatureGroup to collect bounds from ALL markers
+  var boundsGroup = L.featureGroup().addTo(map);
+
+  // --- Inline markers (if provided)
+  {{ with .Get "markers" }}
+    var inlineMarkers = JSON.parse({{ . | jsonify }});
+    inlineMarkers.forEach(function(m) {
+      var marker = L.marker([m.lat, m.lng]).addTo(map).bindPopup(m.popup || "");
+      boundsGroup.addLayer(marker);
+    });
+  {{ end }}
+
+  // --- External marker file (if provided)
+  {{ with .Get "markersFile" }}
+    fetch("{{ . }}")
+      .then(res => res.json())
+      .then(function(externalMarkers) {
+        externalMarkers.forEach(function(m) {
+          var marker = L.marker([m.lat, m.lng]).addTo(map).bindPopup(m.popup || "");
+          boundsGroup.addLayer(marker);
+        });
+
+        // Fit after external markers load
+        if (boundsGroup.getLayers().length > 0) {
+          map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });
+        }
+      })
+      .catch(function(err) {
+        console.error("Failed to load markers file:", err);
+      });
+  {{ end }}
+
+  // --- Auto-fit for inline-only or mixed sets
+  setTimeout(function() {
+    if (boundsGroup.getLayers().length > 0) {
+      map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });
+    }
+  }, 300);
+
+})();
+</script>

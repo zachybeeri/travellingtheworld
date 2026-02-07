@@ -1,0 +1,37 @@
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+  {{- $src := .Get "src" -}}
+  {{- $caption := .Get "caption" -}}
+  {{- $alt := .Get "alt" | default ($caption | markdownify | plainify) -}}
+  
+  {{/* If 'link' is provided, use it; otherwise, link to the image itself for the lightbox */}}
+  {{- $link := .Get "link" | default $src -}}
+  
+  <a href="{{ $link }}" 
+     class="glightbox" 
+     {{ with $caption }}data-description="{{ . | markdownify | plainify }}"{{ end }}
+     {{ with .Get "title" }}data-title="{{ . }}"{{ end }}
+     {{ with .Get "target" }}target="{{ . }}"{{ end }}>
+    
+    <img src="{{ $src }}" 
+         loading="lazy" 
+         alt="{{ $alt }}"
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}} />
+  </a>
+
+  {{- if or (.Get "title") $caption (.Get "attr") -}}
+  <figcaption>
+    {{- with .Get "title" -}}
+      <h4>{{ . }}</h4>
+    {{- end -}}
+    {{- if or $caption (.Get "attr") -}}
+      <p>
+        {{- $caption | markdownify -}}
+        {{- with .Get "attrlink" }} <a href="{{ . }}">{{- end -}}
+        {{- .Get "attr" | markdownify -}}
+        {{- if .Get "attrlink" }}</a>{{ end -}}
+      </p>
+    {{- end -}}
+  </figcaption>
+  {{- end }}
+</figure>

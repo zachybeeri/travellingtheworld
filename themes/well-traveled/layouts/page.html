@@ -1,0 +1,113 @@
+{{ define "main" }}
+<main>
+    <article class="article">
+            <header 
+            id="article-header"
+            class="article__header {{ if .Params.image }}article__header--image{{ end }}"
+
+            {{ with .Params.image }}
+                {{ with $.Resources.GetMatch . }}
+                    style="background-image: url('{{ .RelPermalink }}');"
+                {{ end }}
+            {{ end }}>
+            <h1 class="article__title">{{ .Title }}</h1>
+
+            {{ if and (ne .Type "album") (ne .Type "maps") }}
+                <div class="article__placement">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "02 January 2006" }}
+                </time>
+                {{ with .Params.location }} in {{ . }}{{ end }}
+                </div>
+            {{ end }}
+            {{ if and (ne .Type "album") (ne .Type "maps") }}
+            <div class="article__stats">
+                {{ .WordCount }} words, {{ .ReadingTime }} minutes to read
+            </div>
+            {{ end }}
+        </header>
+
+    <div class="list__entries">
+        <article class="list__entry entry">
+            <div style="display: flex; gap: 2rem;  ;">
+                {{ partial "section-links.html" . }}
+            </div>
+        </article>
+    </div>
+
+        <section class="article__text text">
+            {{ .Content }}
+        </section>
+
+        <footer class="article__footer">
+            {{ with .GetTerms "tags" -}}
+            <nav class="article__tags">
+                Topics:&nbsp;<ul class="tags">
+                    {{ range sort . "LinkTitle" }}<li class="tags__tag"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+                </ul>
+            </nav>
+            {{- end }}
+        </footer>
+    </article>
+
+    {{ if .Params.destination }}
+    <section class="destination">
+        {{ with .Params.destination.osm -}}
+        {{ $coordinates := split . "/" }}
+        {{ $bbox := print (sub (index $coordinates 1 | float) 0.03) "%2C" (sub (index $coordinates 0 | float) 0.015) "%2C" (add (index $coordinates 1 | float) 0.03) "%2C" (add (index $coordinates 0 | float) 0.015) }}
+        {{ $query := print "bbox=" $bbox "&marker=" (index $coordinates 0) "%2C" (index $coordinates 1) "&layer=mapnik" }}
+        <div class="destination__map">
+            <div class="destination__title">Location</div>
+            <iframe src="https://www.openstreetmap.org/export/embed.html?{{ $query | safeURL }}" loading="lazy"></iframe>
+            <a class="destination__map-link" href="https://www.openstreetmap.org/?mlat={{ index $coordinates 0}}&amp;mlon={{ index $coordinates 1 }}">View the full map</a>
+        </div>
+        {{- end }}
+    </section>
+    {{ end }}
+</main>
+
+{{- if and .IsPage (ne .Section "") -}}
+<nav class="navigator">
+    <div class="navigator__title">
+        {{ if eq .Type "album" }}
+            More Galleries
+        {{ else if eq .Type "maps" }}
+            more Maps
+        {{ else }}
+            Continue reading
+        {{ end }}
+    </div>
+    
+    <div class="navigator__intro">
+        This story is part of the series <strong>{{ humanize .Section }}</strong>.
+    </div>
+
+    <div class="navigator__direction navigator__direction--previous">
+    {{ with .PrevInSection }}
+        <span class="navigator__direction-name">Previous</span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></span>
+        
+        {{ if ne $.Type "album" }}
+        <div class="navigator__direction-summary text">
+            {{ .Summary | truncate 150 }}
+        </div>
+        {{ end }}
+    {{ end }}
+    </div>
+
+    <div class="navigator__direction navigator__direction--next">
+    {{ with .NextInSection }}
+        <span class="navigator__direction-name">Next</span>
+        <span class="navigator__direction-link"><a href="{{ .Permalink }}#article-header">{{ .Title }}</a></span>
+        
+    {{/* Hide summary for albums and maps */}}
+        {{ if and (ne $.Type "album") (ne $.Type "maps") }}
+        <div class="navigator__direction-summary text">
+            {{ .Summary | truncate 150 }}
+        </div>
+        {{ end }}
+    {{ end }}
+    </div>
+</nav>
+{{ end }}
+{{ end }}

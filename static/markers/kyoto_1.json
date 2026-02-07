@@ -1,0 +1,12 @@
+[
+  { "lat": 35.0090, "lng": 135.7825, "popup": "Higashiyama Station", "type": "station" },
+  { "lat": 35.0113, "lng": 135.7831, "popup": "Shoren-in Temple", "type": "temple" },
+  { "lat": 35.0062, "lng": 135.7828, "popup": "Chion-in Temple", "type": "temple" },
+  { "lat": 35.0037, "lng": 135.7816, "popup": "Maruyama Park", "type": "park" },
+  { "lat": 35.0037, "lng": 135.7785, "popup": "Yasaka Shrine", "type": "temple" },
+  { "lat": 35.0001, "lng": 135.7808, "popup": "Kodaiji Temple", "type": "temple" },
+  { "lat": 35.0006, "lng": 135.7788, "popup": "Ishibe-Koji Alley", "type": "landmark" },
+  { "lat": 34.9984, "lng": 135.7815, "popup": "Nine-Zaka & Sannen-Zaka Street", "type": "landmark" },
+  { "lat": 34.9985, "lng": 135.7791, "popup": "Yasaka Pagoda (Hokanji Temple)", "type": "temple" },
+  { "lat": 34.9948, "lng": 135.7850, "popup": "Kiyomizu-dera Temple", "type": "temple" }
+]

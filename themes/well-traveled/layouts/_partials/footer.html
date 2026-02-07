@@ -1,0 +1,29 @@
+<footer class="footer">
+    <nav class="footer__pages-nav pages-nav">
+    {{/*
+        <span class="pages-nav__link"><a href="{{ .Site.BaseURL }}">Home</a></span>
+        
+    {{- if and .IsPage (ne .Section "") -}}
+        <span class="pages-nav__link"><a href="{{ .Section | absURL }}">{{ humanize .Section }}</a></span>
+    {{ end }}
+    {{- range site.Menus.main -}}
+        <span class="pages-nav__link"><a href="{{ .Page.Permalink }}">{{ .Title }}</a></span>
+    {{- end -}}
+    */}}
+
+    {{ partial "breadcrumbs_footer.html" . }}
+
+    {{/*
+    {{ with .Parent }}
+     <span class="pages-nav__link"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></span>
+    {{ end }}
+    */}}
+    </nav>
+    <p class="footer__copyright text">{{ .Site.Copyright | markdownify }}</p>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+        selector: '.glightbox'
+        });
+    </script>
+</footer>

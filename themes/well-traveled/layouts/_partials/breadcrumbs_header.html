@@ -1,0 +1,18 @@
+<nav class="breadcrumbs" aria-label="breadcrumb">
+    
+    <ol class="breadcrumb-list">
+
+
+        <!-- Traverse the parent pages -->
+        {{ range .Ancestors.Reverse }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+
+        <!-- Display the current page title (optional, as the user is already on the page) 
+        <li aria-current="page">{{ .Title }}</li>
+        -->
+    </ol>
+</nav>
+

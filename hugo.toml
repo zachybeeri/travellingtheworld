@@ -1,0 +1,48 @@
+baseURL = '/'
+languageCode = 'en-gb'
+title = 'Travel Around the World'
+theme = 'well-traveled'
+min_version = 0.152
+
+copyright = """
+Built with [Hugo](https://gohugo.io/) using the theme 
+["Well Traveled"](https://github.com/mpaluchowski/hugo-well-traveled.git) 
+by [Michał Paluchowski](https://michal.paluchowski.com/); 
+[GLightbox](https://biati-digital.github.io/glightbox/); maps powered by 
+[Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
+"""
+
+[params.favicon]
+  image = "/img/favicon_new.ico"
+  type = "image/x-icon"
+  sizes = "any"
+
+[params.author]
+  name = "GG"
+  homepage = "/"
+
+[params.description]
+  description = 'description.'
+
+[params.error404]
+  title = 'Lost a page?'
+  text = 'We could not find anything under the address you requested. You may want to start from the <a href="/">homepage</a> or go back and try another link.'
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      autoHeadingIDType = "github"
+      autoHeadingID = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+

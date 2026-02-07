@@ -1,0 +1,37 @@
+{{ define "main" }}
+<main>
+    {{/* Get only top-level sections */}}
+    {{ range (where .Site.Sections "Kind" "section") }}
+    <section class="section" id="section-{{ .Title | urlize }}"
+        {{- if .Params.image.source -}}
+            {{/* Using relURL ensures the path works across different environments */}}
+            style="background-image: url('{{ .Params.image.source | relURL }}');"
+        {{- end -}}>
+        
+        <div class="section__content">
+            <h2 class="section__name">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+
+            <div class="section__entries">
+                {{/* Check if there are actual posts/pages in this section */}}
+                {{ if gt (len .Pages) 0 }}
+                    {{/* You could add a 'Featured' list or latest post here */}}
+                    {{/* Example: Display the number of entries in this section 
+                    <p>Explore our {{ len .Pages }} entries in this category.</p>
+                    */}}
+                {{ else }}
+                    <div class="section__entry text">
+                        <p>{{ .Params.teaser | default "Coming soon..." | markdownify }}</p>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+
+        {{ with .Params.image.credit }}
+            <aside class="section__image-credit">{{ . | markdownify }}</aside>
+        {{ end }}
+    </section>
+    {{ end }}
+</main>
+{{ end }}

@@ -1,0 +1,31 @@
+{{ define "main" }}
+<main class="page__main container">
+    <article class="article">
+        <header class="article__header">
+            <h1 class="article__title">{{ .Title }}</h1>
+            {{ if .Date }}
+            <p class="article__meta">
+                Published on 
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "January 2, 2006" }}
+                </time>
+            </p>
+            {{ end }}
+        </header>
+
+        <section class="article__content text">
+            {{ .Content }}
+        </section>
+
+        {{ if .Params.tags }}
+        <footer class="article__footer">
+            <ul class="article__tags">
+                {{ range .Params.tags }}
+                <li><a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+                {{ end }}
+            </ul>
+        </footer>
+        {{ end }}
+    </article>
+</main>
+{{ end }}

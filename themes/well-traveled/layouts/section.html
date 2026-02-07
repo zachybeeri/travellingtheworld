@@ -1,0 +1,47 @@
+{{ define "main" }}
+<main class="page__main list">
+    {{/* Check if image exists and handle the background safely */}}
+    <header class="list__header{{ if .Params.image }} list__header--image{{ end }}"
+            {{ with .Params.image.source }} style="background-image: url('{{ . | absURL }}');"{{ end }}>
+        <h1 class="list__title">{{ .Title }}</h1>
+        {{ with .Params.image.credit }}
+            <aside class="list__header-image-credit">{{ . | markdownify }}</aside>
+        {{ end }}
+    </header>
+
+    <div class="list__entries">
+        {{/* Navigation / Section Links */}}
+        <article class="list__entry entry">
+            <nav class="section-nav" style="display: flex; gap: 2rem;">
+                {{ partial "section-links.html" . }}
+            </nav>
+        </article>
+
+        {{/* Loop through the pages */}}
+        {{ range .Pages }} {{/* .Data.Pages is deprecated in newer Hugo versions; .Pages is preferred */}}
+        <article class="list__entry entry">
+            <h2 class="entry__title">
+                <a href="{{ .Permalink }}#article-header">{{ .Title }}</a>
+            </h2>
+            
+            <div class="entry__placement">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "02 January 2006" }}
+                </time>
+                {{ with .Params.location }} 
+                    <span class="entry__location"> in {{ . }}</span>
+                {{ end }}
+            </div>
+
+            <div class="entry__summary text">
+                {{ if .Summary }}
+                    {{ .Summary | plainify }}
+                {{ else }}
+                    {{ .Description | plainify }}
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</main>
+{{ end }}

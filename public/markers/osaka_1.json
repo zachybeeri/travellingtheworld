@@ -1,0 +1,12 @@
+[
+  { "lat": 35.710063, "lng": 139.8107, "popup": "Tokyo Skytree" },
+  { "lat": 35.658581, "lng": 139.745433, "popup": "Tokyo Tower" },
+  { "lat": 35.673261, "lng": 139.710053, "popup": "Meiji Shrine" },
+  { "lat": 35.6595, "lng": 139.7005, "popup": "Shibuya Crossing" },
+  { "lat": 35.6998, "lng": 139.7714, "popup": "Akihabara" },
+  { "lat": 35.685175, "lng": 139.7528, "popup": "Imperial Palace" },
+  { "lat": 35.6695, "lng": 139.7610, "popup": "Ginza District" },
+  { "lat": 35.6251, "lng": 139.7753, "popup": "Odaiba" },
+  { "lat": 35.7148, "lng": 139.7967, "popup": "Senso-ji Temple (Asakusa)" },
+  { "lat": 35.6830, "lng": 139.7745, "popup": "Ueno Park & Zoo" }
+]

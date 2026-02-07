@@ -1,5 +1,5 @@
 +++
-title = 'Paris 1'
+title = 'Paris 2026'
 type = 'album'
 date = '2023-01-12'
 image = "A.jpeg"

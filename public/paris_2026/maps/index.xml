@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paris 2026 Maps on Travel Around the World</title>
-    <link>https://travellingaroundtheworld.black-tulip.net/paris_2026/maps/</link>
+    <link>https://travellingtheworld.pages.dev/paris_2026/maps/</link>
     <description>Recent content in Paris 2026 Maps on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,12 +13,12 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingaroundtheworld.black-tulip.net/paris_2026/maps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travellingtheworld.pages.dev/paris_2026/maps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Here are the main places we visited in Paris</title>
-      <link>https://travellingaroundtheworld.black-tulip.net/paris_2026/maps/paris/</link>
+      <link>https://travellingtheworld.pages.dev/paris_2026/maps/paris/</link>
       <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://travellingaroundtheworld.black-tulip.net/paris_2026/maps/paris/</guid>
+      <guid>https://travellingtheworld.pages.dev/paris_2026/maps/paris/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34;&#xA;     integrity=&#34;sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=&#34;&#xA;     crossorigin=&#34;&#34;/&gt;&#xA;    &lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&#xA;     integrity=&#34;sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=&#34;&#xA;     crossorigin=&#34;&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;map-map&#34; style=&#34;height: 500px;&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;(function() {&#xA;  var mapId = &#34;map-map&#34;;&#xA;&#xA;  var map = L.map(mapId).setView(&#xA;    [&#34;&#34;, &#34;&#34;],&#xA;    &#34;13&#34;&#xA;  );&#xA;&#xA;  L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {&#xA;    maxZoom: 19,&#xA;    attribution: &#39;© OpenStreetMap contributors&#39;&#xA;  }).addTo(map);&#xA;&#xA;  &#xA;  var boundsGroup = L.featureGroup().addTo(map);&#xA;&#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;    fetch(&#34;\/markers\/paris.json&#34;)&#xA;      .then(res =&gt; res.json())&#xA;      .then(function(externalMarkers) {&#xA;        externalMarkers.forEach(function(m) {&#xA;          var marker = L.marker([m.lat, m.lng]).addTo(map).bindPopup(m.popup || &#34;&#34;);&#xA;          boundsGroup.addLayer(marker);&#xA;        });&#xA;&#xA;        &#xA;        if (boundsGroup.getLayers().length &gt; 0) {&#xA;          map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;        }&#xA;      })&#xA;      .catch(function(err) {&#xA;        console.error(&#34;Failed to load markers file:&#34;, err);&#xA;      });&#xA;  &#xA;&#xA;  &#xA;  setTimeout(function() {&#xA;    if (boundsGroup.getLayers().length &gt; 0) {&#xA;      map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;    }&#xA;  }, 300);&#xA;&#xA;})();&#xA;&lt;/script&gt;</description>
     </item>
   </channel>

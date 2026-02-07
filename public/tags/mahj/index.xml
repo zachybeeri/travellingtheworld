@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MahJ on Travel Around the World</title>
-    <link>https://travellingaroundtheworld.black-tulip.net/tags/mahj/</link>
+    <link>https://travellingtheworld.pages.dev/tags/mahj/</link>
     <description>Recent content in MahJ on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,12 +13,12 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingaroundtheworld.black-tulip.net/tags/mahj/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travellingtheworld.pages.dev/tags/mahj/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mahJ and Musée de Montmartre</title>
-      <link>https://travellingaroundtheworld.black-tulip.net/paris_2026/day_2/</link>
+      <link>https://travellingtheworld.pages.dev/paris_2026/day_2/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingaroundtheworld.black-tulip.net/paris_2026/day_2/</guid>
+      <guid>https://travellingtheworld.pages.dev/paris_2026/day_2/</guid>
       <description>Denise Bellon: A Wandering Gaze and École de Paris, Collection Marek Roefler</description>
     </item>
   </channel>

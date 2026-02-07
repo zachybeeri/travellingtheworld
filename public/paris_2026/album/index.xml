@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photos from Paris 2026 on Travel Around the World</title>
-    <link>https://travellingaroundtheworld.black-tulip.net/paris_2026/album/</link>
+    <link>https://travellingtheworld.pages.dev/paris_2026/album/</link>
     <description>Recent content in Photos from Paris 2026 on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,12 +13,12 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Thu, 12 Jan 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingaroundtheworld.black-tulip.net/paris_2026/album/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travellingtheworld.pages.dev/paris_2026/album/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Paris 1</title>
-      <link>https://travellingaroundtheworld.black-tulip.net/paris_2026/album/paris_1/</link>
+      <title>Paris 2026</title>
+      <link>https://travellingtheworld.pages.dev/paris_2026/album/paris_1/</link>
       <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://travellingaroundtheworld.black-tulip.net/paris_2026/album/paris_1/</guid>
+      <guid>https://travellingtheworld.pages.dev/paris_2026/album/paris_1/</guid>
       <description>Check out some of the highlights from my trip: Paris 1</description>
     </item>
   </channel>

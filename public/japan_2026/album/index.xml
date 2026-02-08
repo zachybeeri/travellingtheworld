@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photos from Japan 2026 on Travel Around the World</title>
-    <link>https://travellingtheworld.pages.dev/japan_2026/album/</link>
+    <link>https://travellingtheworld.black-tulip.net/japan_2026/album/</link>
     <description>Recent content in Photos from Japan 2026 on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,12 +13,12 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingtheworld.pages.dev/japan_2026/album/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travellingtheworld.black-tulip.net/japan_2026/album/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coming soon!</title>
-      <link>https://travellingtheworld.pages.dev/japan_2026/album/tokyo/</link>
+      <link>https://travellingtheworld.black-tulip.net/japan_2026/album/tokyo/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/japan_2026/album/tokyo/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/japan_2026/album/tokyo/</guid>
       <description></description>
     </item>
   </channel>

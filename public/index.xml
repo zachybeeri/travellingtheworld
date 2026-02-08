@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Travel Around the World</title>
-    <link>https://travellingtheworld.pages.dev/</link>
+    <link>https://travellingtheworld.black-tulip.net/</link>
     <description>Recent content in Home on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,75 +13,75 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingtheworld.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travellingtheworld.black-tulip.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Planning</title>
-      <link>https://travellingtheworld.pages.dev/japan_2026/00_planning/</link>
+      <link>https://travellingtheworld.black-tulip.net/japan_2026/00_planning/</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/japan_2026/00_planning/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/japan_2026/00_planning/</guid>
       <description>After years of dreaming, the countdown is finally on: 2026 is the year our Japanese adventure becomes a reality.</description>
     </item>
     <item>
       <title>Notre-Dame de Paris</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/day_4/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_4/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/day_4/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_4/</guid>
       <description>Notre-Dame de Paris</description>
     </item>
     <item>
       <title>Opéra Garnier</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/day_3/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_3/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/day_3/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_3/</guid>
       <description>Opéra Garnier</description>
     </item>
     <item>
       <title>mahJ and Musée de Montmartre</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/day_2/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_2/</link>
       <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/day_2/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_2/</guid>
       <description>Denise Bellon: A Wandering Gaze and École de Paris, Collection Marek Roefler</description>
     </item>
     <item>
       <title>Musée de l&#39;Orangerie and St‑Germain</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/day_1/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_1/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/day_1/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_1/</guid>
       <description>Berthe Weill exhibtion at the Musée de l&amp;rsquo;Orangerie</description>
     </item>
     <item>
       <title>Maps: Japan</title>
-      <link>https://travellingtheworld.pages.dev/japan_2026/maps/1_japan/</link>
+      <link>https://travellingtheworld.black-tulip.net/japan_2026/maps/1_japan/</link>
       <pubDate>Wed, 24 Dec 2025 08:00:00 -0700</pubDate>
-      <guid>https://travellingtheworld.pages.dev/japan_2026/maps/1_japan/</guid>
-      <description>&lt;h2 id=&#34;places-we-will-be-visiting-in-japan&#34;&gt;Places we will be visiting in Japan&lt;/h2&gt;&#xA;    &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34;&#xA;     integrity=&#34;sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=&#34;&#xA;     crossorigin=&#34;&#34;/&gt;&#xA;    &lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&#xA;     integrity=&#34;sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=&#34;&#xA;     crossorigin=&#34;&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;map-map&#34; style=&#34;height: 500px;&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;(function() {&#xA;  var mapId = &#34;map-map&#34;;&#xA;&#xA;  var map = L.map(mapId).setView(&#xA;    [&#34;&#34;, &#34;&#34;],&#xA;    &#34;13&#34;&#xA;  );&#xA;&#xA;  L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {&#xA;    maxZoom: 19,&#xA;    attribution: &#39;© OpenStreetMap contributors&#39;&#xA;  }).addTo(map);&#xA;&#xA;  &#xA;  var boundsGroup = L.featureGroup().addTo(map);&#xA;&#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;    fetch(&#34;\/markers\/japan.json&#34;)&#xA;      .then(res =&gt; res.json())&#xA;      .then(function(externalMarkers) {&#xA;        externalMarkers.forEach(function(m) {&#xA;          var marker = L.marker([m.lat, m.lng]).addTo(map).bindPopup(m.popup || &#34;&#34;);&#xA;          boundsGroup.addLayer(marker);&#xA;        });&#xA;&#xA;        &#xA;        if (boundsGroup.getLayers().length &gt; 0) {&#xA;          map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;        }&#xA;      })&#xA;      .catch(function(err) {&#xA;        console.error(&#34;Failed to load markers file:&#34;, err);&#xA;      });&#xA;  &#xA;&#xA;  &#xA;  setTimeout(function() {&#xA;    if (boundsGroup.getLayers().length &gt; 0) {&#xA;      map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;    }&#xA;  }, 300);&#xA;&#xA;})();&#xA;&lt;/script&gt;</description>
+      <guid>https://travellingtheworld.black-tulip.net/japan_2026/maps/1_japan/</guid>
+      <description>&lt;h2 id=&#34;places-we-will-be-visiting-in-japan&#34;&gt;Places we will be visiting in Japan&lt;/h2&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; /&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&#34;&gt;&#xA;&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;map-map&#34; style=&#34;height: 500px; width: 100%;&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;(function() {&#xA;  const mapId = &#34;map-map&#34;;&#xA;  const map = L.map(mapId).setView([ 0 ,  0 ],  13 );&#xA;&#xA;  L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {&#xA;    maxZoom: 19,&#xA;    attribution: &#39;© OpenStreetMap&#39;&#xA;  }).addTo(map);&#xA;&#xA;  const boundsGroup = L.featureGroup().addTo(map);&#xA;&#xA;const iconConfig = {&#xA;  &#xA;  cafe: { color: &#34;#e67e22&#34;, icon: &#34;fa-coffee&#34; },&#xA;  restaurant: { color: &#34;#d35400&#34;, icon: &#34;fa-utensils&#34; },&#xA;  hotel: { color: &#34;#2980b9&#34;, icon: &#34;fa-bed&#34; },&#xA;  ryokan: { color: &#34;#5d4037&#34;, icon: &#34;fa-house-user&#34; }, &#xA;  onsen: { color: &#34;#3498db&#34;, icon: &#34;fa-hot-tub&#34; },     &#xA;&#xA;  &#xA;  station: { color: &#34;#34495e&#34;, icon: &#34;fa-train&#34; },&#xA;  airport: { color: &#34;#2c3e50&#34;, icon: &#34;fa-plane&#34; },&#xA;  cable_car: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-cable-car&#34; }, &#xA;  ferry: { color: &#34;#16a085&#34;, icon: &#34;fa-ship&#34; },&#xA;  boat: { color: &#34;#1abc9c&#34;, icon: &#34;fa-anchor&#34; },&#xA;&#xA;  &#xA;  shinto_shrines: { color: &#34;#e74c3c&#34;, icon: &#34;fa-torii-gate&#34; }, &#xA;  buddhist_temples: { color: &#34;#f39c12&#34;, icon: &#34;fa-vihara&#34; },      &#xA;  palace: { color: &#34;#8e44ad&#34;, icon: &#34;fa-landmark&#34; },&#xA;  castle: { color: &#34;#2c3e50&#34;, icon: &#34;fa-fort-awesome&#34; },     &#xA;  memorial: { color: &#34;#95a5a6&#34;, icon: &#34;fa-monument&#34; },&#xA;  landmark: { color: &#34;#c0392b&#34;, icon: &#34;fa-map-pin&#34; },&#xA;  museum: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-building-columns&#34; },&#xA;&#xA;  &#xA;  garden: { color: &#34;#27ae60&#34;, icon: &#34;fa-leaf&#34; },&#xA;  forest: { color: &#34;#1b5e20&#34;, icon: &#34;fa-tree&#34; },&#xA;  park: { color: &#34;#2ecc71&#34;, icon: &#34;fa-tree&#34; },&#xA;  bamboo: { color: &#34;#00c853&#34;, icon: &#34;fa-barcode&#34; },    &#xA;  lake: { color: &#34;#3498db&#34;, icon: &#34;fa-water&#34; },&#xA;  sakura: { color: &#34;#ffc0cb&#34;, icon: &#34;fa-clover&#34; },           &#xA;  deer: { color: &#34;#8d6e63&#34;, icon: &#34;fa-paw&#34; },&#xA;&#xA;  &#xA;  observation_tower: { color: &#34;#16a085&#34;, icon: &#34;fa-tower-observation&#34; }, &#xA;  shops: { color: &#34;#9b59b6&#34;, icon: &#34;fa-bag-shopping&#34; },&#xA;  market: { color: &#34;#8e44ad&#34;, icon: &#34;fa-basket-shopping&#34; },&#xA;&#xA;  &#xA;  default: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-location-dot&#34; }&#xA;};&#xA;&#xA;const createFontAwesomeIcon = (type) =&gt; {&#xA;  const config = iconConfig[type] || iconConfig.default;&#xA;  &#xA;  return L.divIcon({&#xA;    html: `&lt;div style=&#34;display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; background-color: ${config.color}; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);&#34;&gt;&#xA;             &lt;i class=&#34;fa-solid ${config.icon}&#34; style=&#34;transform: rotate(45deg); color: white; font-size: 14px;&#34;&gt;&lt;/i&gt;&#xA;           &lt;/div&gt;`,&#xA;    className: &#39;custom-div-icon&#39;, &#xA;    iconSize: [30, 30],&#xA;    iconAnchor: [15, 30],&#xA;    popupAnchor: [0, -30]&#xA;  });&#xA;};&#xA;&#xA;  &#xA;  const addMarker = (m) =&gt; {&#xA;    if (m.lat &amp;&amp; m.lng) {&#xA;      const icon = createFontAwesomeIcon(m.type);&#xA;      const marker = L.marker([m.lat, m.lng], { icon: icon }).addTo(map);&#xA;      &#xA;      if (m.popup) marker.bindPopup(m.popup);&#xA;      boundsGroup.addLayer(marker);&#xA;    }&#xA;  };&#xA;&#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;    fetch(&#34;/markers/japan.json&#34;)&#xA;      .then(res =&gt; res.json())&#xA;      .then(data =&gt; {&#xA;        data.forEach(addMarker);&#xA;        &#xA;        if (boundsGroup.getLayers().length &gt; 0) {&#xA;          map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });&#xA;        }&#xA;      })&#xA;      .catch(err =&gt; console.error(&#34;Map Error:&#34;, err));&#xA;  &#xA;&#xA;  &#xA;  &#xA;})();&#xA;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Coming soon!</title>
-      <link>https://travellingtheworld.pages.dev/japan_2026/album/tokyo/</link>
+      <link>https://travellingtheworld.black-tulip.net/japan_2026/album/tokyo/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/japan_2026/album/tokyo/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/japan_2026/album/tokyo/</guid>
       <description></description>
     </item>
     <item>
       <title>Here are the main places we visited in Paris</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/maps/paris/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/maps/paris/</link>
       <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/maps/paris/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34;&#xA;     integrity=&#34;sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=&#34;&#xA;     crossorigin=&#34;&#34;/&gt;&#xA;    &lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&#xA;     integrity=&#34;sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=&#34;&#xA;     crossorigin=&#34;&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;map-map&#34; style=&#34;height: 500px;&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;(function() {&#xA;  var mapId = &#34;map-map&#34;;&#xA;&#xA;  var map = L.map(mapId).setView(&#xA;    [&#34;&#34;, &#34;&#34;],&#xA;    &#34;13&#34;&#xA;  );&#xA;&#xA;  L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {&#xA;    maxZoom: 19,&#xA;    attribution: &#39;© OpenStreetMap contributors&#39;&#xA;  }).addTo(map);&#xA;&#xA;  &#xA;  var boundsGroup = L.featureGroup().addTo(map);&#xA;&#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;    fetch(&#34;\/markers\/paris.json&#34;)&#xA;      .then(res =&gt; res.json())&#xA;      .then(function(externalMarkers) {&#xA;        externalMarkers.forEach(function(m) {&#xA;          var marker = L.marker([m.lat, m.lng]).addTo(map).bindPopup(m.popup || &#34;&#34;);&#xA;          boundsGroup.addLayer(marker);&#xA;        });&#xA;&#xA;        &#xA;        if (boundsGroup.getLayers().length &gt; 0) {&#xA;          map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;        }&#xA;      })&#xA;      .catch(function(err) {&#xA;        console.error(&#34;Failed to load markers file:&#34;, err);&#xA;      });&#xA;  &#xA;&#xA;  &#xA;  setTimeout(function() {&#xA;    if (boundsGroup.getLayers().length &gt; 0) {&#xA;      map.fitBounds(boundsGroup.getBounds(), { padding: [20, 20] });&#xA;    }&#xA;  }, 300);&#xA;&#xA;})();&#xA;&lt;/script&gt;</description>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/maps/paris/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; /&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&#34;&gt;&#xA;&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;div id=&#34;map-map&#34; style=&#34;height: 500px; width: 100%;&#34;&gt;&lt;/div&gt;&#xA;&#xA;&lt;script&gt;&#xA;(function() {&#xA;  const mapId = &#34;map-map&#34;;&#xA;  const map = L.map(mapId).setView([ 0 ,  0 ],  13 );&#xA;&#xA;  L.tileLayer(&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;, {&#xA;    maxZoom: 19,&#xA;    attribution: &#39;© OpenStreetMap&#39;&#xA;  }).addTo(map);&#xA;&#xA;  const boundsGroup = L.featureGroup().addTo(map);&#xA;&#xA;const iconConfig = {&#xA;  &#xA;  cafe: { color: &#34;#e67e22&#34;, icon: &#34;fa-coffee&#34; },&#xA;  restaurant: { color: &#34;#d35400&#34;, icon: &#34;fa-utensils&#34; },&#xA;  hotel: { color: &#34;#2980b9&#34;, icon: &#34;fa-bed&#34; },&#xA;  ryokan: { color: &#34;#5d4037&#34;, icon: &#34;fa-house-user&#34; }, &#xA;  onsen: { color: &#34;#3498db&#34;, icon: &#34;fa-hot-tub&#34; },     &#xA;&#xA;  &#xA;  station: { color: &#34;#34495e&#34;, icon: &#34;fa-train&#34; },&#xA;  airport: { color: &#34;#2c3e50&#34;, icon: &#34;fa-plane&#34; },&#xA;  cable_car: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-cable-car&#34; }, &#xA;  ferry: { color: &#34;#16a085&#34;, icon: &#34;fa-ship&#34; },&#xA;  boat: { color: &#34;#1abc9c&#34;, icon: &#34;fa-anchor&#34; },&#xA;&#xA;  &#xA;  shinto_shrines: { color: &#34;#e74c3c&#34;, icon: &#34;fa-torii-gate&#34; }, &#xA;  buddhist_temples: { color: &#34;#f39c12&#34;, icon: &#34;fa-vihara&#34; },      &#xA;  palace: { color: &#34;#8e44ad&#34;, icon: &#34;fa-landmark&#34; },&#xA;  castle: { color: &#34;#2c3e50&#34;, icon: &#34;fa-fort-awesome&#34; },     &#xA;  memorial: { color: &#34;#95a5a6&#34;, icon: &#34;fa-monument&#34; },&#xA;  landmark: { color: &#34;#c0392b&#34;, icon: &#34;fa-map-pin&#34; },&#xA;  museum: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-building-columns&#34; },&#xA;&#xA;  &#xA;  garden: { color: &#34;#27ae60&#34;, icon: &#34;fa-leaf&#34; },&#xA;  forest: { color: &#34;#1b5e20&#34;, icon: &#34;fa-tree&#34; },&#xA;  park: { color: &#34;#2ecc71&#34;, icon: &#34;fa-tree&#34; },&#xA;  bamboo: { color: &#34;#00c853&#34;, icon: &#34;fa-barcode&#34; },    &#xA;  lake: { color: &#34;#3498db&#34;, icon: &#34;fa-water&#34; },&#xA;  sakura: { color: &#34;#ffc0cb&#34;, icon: &#34;fa-clover&#34; },           &#xA;  deer: { color: &#34;#8d6e63&#34;, icon: &#34;fa-paw&#34; },&#xA;&#xA;  &#xA;  observation_tower: { color: &#34;#16a085&#34;, icon: &#34;fa-tower-observation&#34; }, &#xA;  shops: { color: &#34;#9b59b6&#34;, icon: &#34;fa-bag-shopping&#34; },&#xA;  market: { color: &#34;#8e44ad&#34;, icon: &#34;fa-basket-shopping&#34; },&#xA;&#xA;  &#xA;  default: { color: &#34;#7f8c8d&#34;, icon: &#34;fa-location-dot&#34; }&#xA;};&#xA;&#xA;const createFontAwesomeIcon = (type) =&gt; {&#xA;  const config = iconConfig[type] || iconConfig.default;&#xA;  &#xA;  return L.divIcon({&#xA;    html: `&lt;div style=&#34;display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; background-color: ${config.color}; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);&#34;&gt;&#xA;             &lt;i class=&#34;fa-solid ${config.icon}&#34; style=&#34;transform: rotate(45deg); color: white; font-size: 14px;&#34;&gt;&lt;/i&gt;&#xA;           &lt;/div&gt;`,&#xA;    className: &#39;custom-div-icon&#39;, &#xA;    iconSize: [30, 30],&#xA;    iconAnchor: [15, 30],&#xA;    popupAnchor: [0, -30]&#xA;  });&#xA;};&#xA;&#xA;  &#xA;  const addMarker = (m) =&gt; {&#xA;    if (m.lat &amp;&amp; m.lng) {&#xA;      const icon = createFontAwesomeIcon(m.type);&#xA;      const marker = L.marker([m.lat, m.lng], { icon: icon }).addTo(map);&#xA;      &#xA;      if (m.popup) marker.bindPopup(m.popup);&#xA;      boundsGroup.addLayer(marker);&#xA;    }&#xA;  };&#xA;&#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;    fetch(&#34;/markers/paris.json&#34;)&#xA;      .then(res =&gt; res.json())&#xA;      .then(data =&gt; {&#xA;        data.forEach(addMarker);&#xA;        &#xA;        if (boundsGroup.getLayers().length &gt; 0) {&#xA;          map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });&#xA;        }&#xA;      })&#xA;      .catch(err =&gt; console.error(&#34;Map Error:&#34;, err));&#xA;  &#xA;&#xA;  &#xA;  &#xA;})();&#xA;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Paris trip from 8th to 12th January 2026</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/day_0/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_0/</link>
       <pubDate>Tue, 16 Dec 2025 16:26:30 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/day_0/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_0/</guid>
       <description>What a great way to start the year. We have planned a trip to Paris from &lt;strong&gt;8th January 2026&lt;/strong&gt; to &lt;strong&gt;12th January 2026&lt;/strong&gt;.</description>
     </item>
     <item>
       <title>Paris 2026</title>
-      <link>https://travellingtheworld.pages.dev/paris_2026/album/paris_1/</link>
+      <link>https://travellingtheworld.black-tulip.net/paris_2026/album/paris_1/</link>
       <pubDate>Thu, 12 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.pages.dev/paris_2026/album/paris_1/</guid>
+      <guid>https://travellingtheworld.black-tulip.net/paris_2026/album/paris_1/</guid>
       <description>Check out some of the highlights from my trip: Paris 1</description>
     </item>
   </channel>

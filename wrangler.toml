@@ -1,11 +1,8 @@
 name = "travellingtheworld"
 compatibility_date = "2025-07-31"
-# Add this line below:
+
+# Pages uses this instead of [assets]
 pages_build_output_dir = "./public"
 
-[build]
-command = "chmod a+x build.sh && ./build.sh"
-
-[assets]
-directory = "./public"
-not_found_handling = "404-page"
+# Pages uses this instead of [build]
+build_command = "chmod a+x build.sh && ./build.sh"

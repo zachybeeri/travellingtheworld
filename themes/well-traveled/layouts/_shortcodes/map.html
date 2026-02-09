@@ -7,7 +7,10 @@
 <script>
 (function() {
   const mapId = "map-{{ .Get "id" }}";
-  const map = L.map(mapId).setView([{{ .Get "lat" | default 0 }}, {{ .Get "lng" | default 0 }}], {{ .Get "zoom" | default 13 }});
+  const map = L.map(mapId).setView(
+    [{{ .Get "lat" | default 0 }}, {{ .Get "lng" | default 0 }}],
+    {{ .Get "zoom" | default 13 }}
+  );
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -16,100 +19,202 @@
 
   const boundsGroup = L.featureGroup().addTo(map);
 
-const iconConfig = {
-  // --- Dining & Lodging (Orange/Blue) ---
-  cafe: { color: "#e67e22", icon: "fa-coffee" },
-  restaurant: { color: "#d35400", icon: "fa-utensils" },
-  hotel: { color: "#2980b9", icon: "fa-bed" },
-  ryokan: { color: "#5d4037", icon: "fa-house-user" }, // Free alternative
-  onsen: { color: "#3498db", icon: "fa-hot-tub" },     // Free alternative
+  const iconConfig = {
+    // --- Dining & Lodging (Orange/Blue) ---
+    cafe: { color: "#e67e22", icon: "fa-coffee" },
+    restaurant: { color: "#d35400", icon: "fa-utensils" },
+    hotel: { color: "#2980b9", icon: "fa-bed" },
+    ryokan: { color: "#5d4037", icon: "fa-house-user" },
+    onsen: { color: "#3498db", icon: "fa-hot-tub" },
+    // --- Transport (Navy/Teal) ---
+    station: { color: "#34495e", icon: "fa-train" },
+    airport: { color: "#2c3e50", icon: "fa-plane" },
+    cable_car: { color: "#7f8c8d", icon: "fa-cable-car" },
+    ferry: { color: "#16a085", icon: "fa-ship" },
+    boat: { color: "#1abc9c", icon: "fa-anchor" },
+    // --- Culture & History (Red/Gold/Grey) ---
+    shinto_shrine: { color: "#e74c3c", icon: "fa-torii-gate" },
+    buddhist_temple: { color: "#f39c12", icon: "fa-vihara" },
+    palace: { color: "#8e44ad", icon: "fa-landmark" },
+    castle: { color: "#2c3e50", icon: "fa-fort-awesome" },
+    memorial: { color: "#95a5a6", icon: "fa-monument" },
+    landmark: { color: "#c0392b", icon: "fa-map-pin" },
+    museum: { color: "#7f8c8d", icon: "fa-building-columns" },
+    // --- Nature (Greens) ---
+    garden: { color: "#27ae60", icon: "fa-leaf" },
+    forest: { color: "#1b5e20", icon: "fa-tree" },
+    park: { color: "#2ecc71", icon: "fa-tree" },
+    bamboo: { color: "#00c853", icon: "fa-barcode" },
+    lake: { color: "#3498db", icon: "fa-water" },
+    sakura: { color: "#ffc0cb", icon: "fa-clover" },
+    deer: { color: "#8d6e63", icon: "fa-paw" },
+    // --- Misc/Sightseeing (Purple/Yellow) ---
+    observation_tower: { color: "#16a085", icon: "fa-tower-observation" },
+    shops: { color: "#9b59b6", icon: "fa-bag-shopping" },
+    market: { color: "#8e44ad", icon: "fa-basket-shopping" },
 
-  // --- Transport (Navy/Teal) ---
-  station: { color: "#34495e", icon: "fa-train" },
-  airport: { color: "#2c3e50", icon: "fa-plane" },
-  cable_car: { color: "#7f8c8d", icon: "fa-cable-car" }, // FA6 Free
-  ferry: { color: "#16a085", icon: "fa-ship" },
-  boat: { color: "#1abc9c", icon: "fa-anchor" },
+    Tokyo: { color: "#34495e", icon: "fa-city" },
+    Kyoto: { color: "#c0392b", icon: "fa-torii-gate" },
+    Hakone: { color: "#27ae60", icon: "fa-mountain-sun" },
+    Osaka: { color: "#d35400", icon: "fa-utensils" },
+    Nara: { color: "#2ecc71", icon: "fa-tree" },
+    Okayama: { color: "#478217", icon: "fa-leaf" },
+    Naoshima: { color: "#9b59b6", icon: "fa-palette" },
+    Hiroshima: { color: "#7f8c8d", icon: "fa-monument" },
+    Kanazawa: { color: "#e91e63", icon: "fa-fan" },
 
-  // --- Culture & History (Red/Gold/Grey) ---
-  shinto_shrines: { color: "#e74c3c", icon: "fa-torii-gate" }, // Best free Torii proxy
-  buddhist_temples: { color: "#f39c12", icon: "fa-vihara" },      // Universal spiritual icon
-  palace: { color: "#8e44ad", icon: "fa-landmark" },
-  castle: { color: "#2c3e50", icon: "fa-fort-awesome" },     // Free Brand icon
-  memorial: { color: "#95a5a6", icon: "fa-monument" },
-  landmark: { color: "#c0392b", icon: "fa-map-pin" },
-  museum: { color: "#7f8c8d", icon: "fa-building-columns" },
-
-  // --- Nature (Greens) ---
-  garden: { color: "#27ae60", icon: "fa-leaf" },
-  forest: { color: "#1b5e20", icon: "fa-tree" },
-  park: { color: "#2ecc71", icon: "fa-tree" },
-  bamboo: { color: "#00c853", icon: "fa-barcode" },    // Visual proxy for stalks
-  lake: { color: "#3498db", icon: "fa-water" },
-  sakura: { color: "#ffc0cb", icon: "fa-clover" },           // Floral proxy
-  deer: { color: "#8d6e63", icon: "fa-paw" },
-
-  // --- Misc/Sightseeing (Purple/Yellow) ---
-  observation_tower: { color: "#16a085", icon: "fa-tower-observation" }, // FA6 Free
-  shops: { color: "#9b59b6", icon: "fa-bag-shopping" },
-  market: { color: "#8e44ad", icon: "fa-basket-shopping" },
-
-  // --- Default ---
-  default: { color: "#7f8c8d", icon: "fa-location-dot" }
-};
-
-const createFontAwesomeIcon = (type) => {
-  const config = iconConfig[type] || iconConfig.default;
-  
-  return L.divIcon({
-    html: `<div style="display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; background-color: ${config.color}; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);">
-             <i class="fa-solid ${config.icon}" style="transform: rotate(45deg); color: white; font-size: 14px;"></i>
-           </div>`,
-    className: 'custom-div-icon', // Removes default Leaflet styling
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
-    popupAnchor: [0, -30]
-  });
-};
-
-  // Helper to add markers and update view
-  const addMarker = (m) => {
-    if (m.lat && m.lng) {
-      const icon = createFontAwesomeIcon(m.type);
-      const marker = L.marker([m.lat, m.lng], { icon: icon }).addTo(map);
-      
-      if (m.popup) marker.bindPopup(m.popup);
-      boundsGroup.addLayer(marker);
-    }
+    // --- Default ---
+    default: { color: "#7f8c8d", icon: "fa-location-dot" }
   };
 
-  // 1. Process Inline Markers
+  const createFontAwesomeIcon = (type) => {
+    const config = iconConfig[type] || iconConfig.default;
+    return L.divIcon({
+      html: `<div style="display:flex;justify-content:center;align-items:center;width:30px;height:30px;background-color:${config.color};border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid white;box-shadow:0 0 4px rgba(0,0,0,0.4);">
+               <i class="fa-solid ${config.icon}" style="transform:rotate(45deg);color:white;font-size:14px;"></i>
+             </div>`,
+      className: 'custom-div-icon',
+      iconSize: [30, 30],
+      iconAnchor: [15, 30],
+      popupAnchor: [0, -30]
+    });
+  };
+  
+  const usedTypes = new Set();
+
+const addMarker = (m) => {
+  if (m.lat && m.lng) {
+    const icon = createFontAwesomeIcon(m.type);
+    const marker = L.marker([m.lat, m.lng], { icon }).addTo(map);
+
+    if (m.popup) marker.bindPopup(m.popup);
+
+    boundsGroup.addLayer(marker);
+
+    // Track which types appear
+    if (m.type) usedTypes.add(m.type);
+  }
+};
+
+
   {{ with .Get "markers" }}
-    const inlineMarkers = {{ . | safeJS }}; 
-    if (Array.isArray(inlineMarkers)) {
-      inlineMarkers.forEach(addMarker);
-    }
+    const inlineMarkers = JSON.parse('{{ . | safeJS }}');
+    if (Array.isArray(inlineMarkers)) inlineMarkers.forEach(addMarker);
   {{ end }}
 
-  // 2. Process External File
+if (!("{{ .Get "markersFile" }}")) {
+  if (boundsGroup.getLayers().length > 0) {
+    map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });
+  }
+  buildLegend();
+}
+
+
   {{ with .Get "markersFile" }}
-    fetch({{ . }})
+    fetch("{{ . }}")
       .then(res => res.json())
       .then(data => {
-        data.forEach(addMarker);
-        // Fit bounds after external data is in
-        if (boundsGroup.getLayers().length > 0) {
-          map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });
-        }
-      })
+  data.forEach(addMarker);
+
+  if (boundsGroup.getLayers().length > 0) {
+    map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });
+  }
+
+  buildLegend();
+})
+
       .catch(err => console.error("Map Error:", err));
   {{ end }}
 
-  // Initial fit for inline markers (if no external file is used)
   {{ if not (.Get "markersFile") }}
     if (boundsGroup.getLayers().length > 0) {
       map.fitBounds(boundsGroup.getBounds(), { padding: [30, 30] });
     }
   {{ end }}
+
+function buildLegend() {
+  const legend = L.control({ position: "bottomright" });
+
+  legend.onAdd = function () {
+    const div = L.DomUtil.create("div", "map-legend");
+    let html = "<h4>Legend</h4><div class='legend-items'>";
+
+    usedTypes.forEach(type => {
+      const cfg = iconConfig[type] || iconConfig.default;
+
+      html += `
+        <div class="legend-item">
+          <div class="legend-icon" style="background-color:${cfg.color}">
+            <i class="fa-solid ${cfg.icon}"></i>
+          </div>
+          <span>${formatLabel(type)}</span>
+        </div>
+      `;
+    });
+
+    html += "</div>";
+    div.innerHTML = html;
+    return div;
+  };
+
+  legend.addTo(map);
+}
+
+function formatLabel(str) {
+  return str
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+
 })();
 </script>
+
+<style>
+  .custom-div-icon {
+    background: none !important;
+    border: none !important;
+  }
+
+  .map-legend {
+  background: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
+  font-size: 14px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.map-legend h4 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.legend-icon i {
+  transform: rotate(45deg);
+  color: white;
+  font-size: 10px;
+}
+
+</style>

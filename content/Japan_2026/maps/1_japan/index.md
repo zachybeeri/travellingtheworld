@@ -2,7 +2,7 @@
 type ='maps'
 title =  'Maps: Japan'
 date = 2025-12-24T08:00:00-07:00
-draft = false
+draft = true
 subtitle = ' '
 comments = false
 image = "map300.jpeg"

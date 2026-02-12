@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Travel Around the World</title>
-    <link>https://travellingtheworld.black-tulip.net/categories/</link>
+    <link>https://travelling.black-tulip.net/categories/</link>
     <description>Recent content in Categories on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -12,6 +12,6 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [GLightbox](https://biati-digital.github.io/glightbox/); maps powered by 
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
-    <atom:link href="https://travellingtheworld.black-tulip.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travelling.black-tulip.net/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

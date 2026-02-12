@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Japan 2026 on Travel Around the World</title>
-    <link>https://travellingtheworld.black-tulip.net/japan_2026/</link>
-    <description>Recent content in Japan 2026 on Travel Around the World</description>
+    <title>Japan on Travel Around the World</title>
+    <link>https://travelling.black-tulip.net/japan_2026/</link>
+    <description>Recent content in Japan on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>Built with [Hugo](https://gohugo.io/) using the theme 
@@ -12,14 +12,7 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [GLightbox](https://biati-digital.github.io/glightbox/); maps powered by 
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
-    <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingtheworld.black-tulip.net/japan_2026/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Planning</title>
-      <link>https://travellingtheworld.black-tulip.net/japan_2026/00_planning/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.black-tulip.net/japan_2026/00_planning/</guid>
-      <description>After years of dreaming, the countdown is finally on: 2026 is the year our Japanese adventure becomes a reality.</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://travelling.black-tulip.net/japan_2026/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

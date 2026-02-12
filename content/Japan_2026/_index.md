@@ -1,8 +1,9 @@
 +++
-date = 2026-01-26T00:00:00Z
-title = 'Japan 2026'
+date = 2025-01-01T00:00:00Z
+title = 'Japan'
 teaser = """
 Welcome to this section!
+draft = true
 
 Here’s a little preview of what’s coming:
 - Posts

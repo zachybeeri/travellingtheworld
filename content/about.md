@@ -34,3 +34,11 @@ This blog was established as a platform to document our travels and share our ex
 
 - **Hugo**
   Built with [Hugo](https://gohugo.io/).
+
+&nbsp;
+
+## 📧 Contact Me
+
+Feel free to reach out if you have any questions or just want to say hi!
+
+- **Email**: [travelling@black-tulip.net](mailto:travelling@black-tulip.net)

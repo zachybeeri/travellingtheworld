@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notre-Dame De Paris on Travel Around the World</title>
-    <link>https://travellingtheworld.black-tulip.net/tags/notre-dame-de-paris/</link>
+    <link>https://travelling.black-tulip.net/tags/notre-dame-de-paris/</link>
     <description>Recent content in Notre-Dame De Paris on Travel Around the World</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
@@ -13,12 +13,12 @@ by [Michał Paluchowski](https://michal.paluchowski.com/);
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/).
 </copyright>
     <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://travellingtheworld.black-tulip.net/tags/notre-dame-de-paris/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://travelling.black-tulip.net/tags/notre-dame-de-paris/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notre-Dame de Paris</title>
-      <link>https://travellingtheworld.black-tulip.net/paris_2026/day_4/</link>
+      <link>https://travelling.black-tulip.net/paris_2026/day_4/</link>
       <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://travellingtheworld.black-tulip.net/paris_2026/day_4/</guid>
+      <guid>https://travelling.black-tulip.net/paris_2026/day_4/</guid>
       <description>Notre-Dame de Paris</description>
     </item>
   </channel>

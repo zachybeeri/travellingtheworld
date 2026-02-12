@@ -1,67 +1,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/japan_2026/00_planning/</loc>
-        <lastmod>2026-02-04T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://travellingtheworld.black-tulip.net/japan_2026/</loc>
-        <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/day_4/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/day_4/</loc>
         <lastmod>2026-01-12T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/day_3/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/day_3/</loc>
         <lastmod>2026-01-11T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/day_2/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/day_2/</loc>
         <lastmod>2026-01-10T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/day_1/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/day_1/</loc>
         <lastmod>2026-01-09T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/japan_2026/maps/1_japan/</loc>
-        <lastmod>2025-12-24T08:00:00-07:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://travellingtheworld.black-tulip.net/japan_2026/album/tokyo/</loc>
+        <loc>https://travelling.black-tulip.net/</loc>
         <lastmod>2025-12-24T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/</loc>
-        <lastmod>2025-12-24T00:00:00+00:00</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/</loc>
         <lastmod>2025-12-24T00:00:00+01:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/maps/paris/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/maps/paris/</loc>
         <lastmod>2025-12-17T00:00:00+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/day_0/</loc>
+        <loc>https://travelling.black-tulip.net/paris_2026/day_0/</loc>
         <lastmod>2025-12-16T16:26:30+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://travellingtheworld.black-tulip.net/paris_2026/album/paris_1/</loc>
+        <loc>https://travelling.black-tulip.net/japan_2026/</loc>
+        <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://travelling.black-tulip.net/paris_2026/album/paris_1/</loc>
         <lastmod>2023-01-12T00:00:00+00:00</lastmod>
     </url>
     

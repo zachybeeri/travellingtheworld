@@ -1,9 +1,10 @@
 +++
 date = 2025-01-01T00:00:00Z
 title = 'Japan'
+draft = true
 teaser = """
 Welcome to this section!
-draft = true
+
 
 Here’s a little preview of what’s coming:
 - Posts
